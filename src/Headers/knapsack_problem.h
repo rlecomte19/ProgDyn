@@ -24,3 +24,7 @@ void initObjectList(ObjectList *o_array);
 void initBag(Bag *b, float b_maxWeight);
 void pushToList(ObjectList *l, Object o);
 void fillBag(ObjectList l, Bag *b);
+void sortArray(ObjectList *l);
+void printObject(Object object);
+void printfObjectList(ObjectList *objectlist);
+void printBag(Bag *bag);
