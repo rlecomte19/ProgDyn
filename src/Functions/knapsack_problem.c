@@ -9,7 +9,6 @@
  * @param o_value 
  * @param o_weight 
  */
-
 void initObject(Object *o, int o_value, float o_weight){
     o->value = o_value;
     o->weight = o_weight;
@@ -109,6 +108,11 @@ void sortArray(ObjectList *listObjects){
     }
 }
 
+/**
+ * @brief 
+ * 
+ * @param object 
+ */
 void printObject(Object object){
     printf("[VAL:%d ; WEIGHT:%.1f]\n", object.value, object.weight);
 }
@@ -118,6 +122,12 @@ void printObjectList(ObjectList *objectlist){
         printObject(objectlist->objectArray[i]);   
     }
 }
+
+/**
+ * @brief 
+ * 
+ * @param bag 
+ */
 void printBag(Bag *bag){
     printf("\n      ###### CONTENU DU SAC ######"); 
     printObjectList(bag->inBag);
