@@ -37,7 +37,7 @@ void initBag(Bag *b, float b_maxWeight){
 }
 
 /**
- * @brief 
+ * @brief Ajoute un élément à une liste d'objets
  * 
  * @param l 
  * @param o 
@@ -52,7 +52,7 @@ void pushToList(ObjectList *l, Object o){
 }
 
 /**
- * @brief 
+ * @brief Remplit le sac selon la condition donnée
  * 
  * @param l 
  * @param b 
@@ -109,13 +109,18 @@ void sortArray(ObjectList *listObjects){
 }
 
 /**
- * @brief 
+ * @brief Fonction similaire à un toString() pour un objet
  * 
  * @param object 
  */
 void printObject(Object object){
     printf("[VAL:%d ; WEIGHT:%.1f]\n", object.value, object.weight);
 }
+/**
+ * @brief Fonction similaire à un toString() pour une liste d'objets
+ * 
+ * @param objectlist 
+ */
 void printObjectList(ObjectList *objectlist){
     for(int i=0; i<objectlist->index;i++){
         printf("\nObject %d : ", i+1);
@@ -124,11 +129,11 @@ void printObjectList(ObjectList *objectlist){
 }
 
 /**
- * @brief 
+ * @brief Fonction similaire à un toString() pour le contenu d'un sac
  * 
  * @param bag 
  */
 void printBag(Bag *bag){
-    printf("\n      ###### CONTENU DU SAC ######"); 
+    printf("\n\nCONTENU DU SAC"); 
     printObjectList(bag->inBag);
 }

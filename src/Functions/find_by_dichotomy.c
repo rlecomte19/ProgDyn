@@ -1,6 +1,14 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+/**
+ * @brief ALgorithme de tri par dichotomie
+ * 
+ * @param array 
+ * @param size_t 
+ * @param value 
+ * @return int 
+ */
 int find_by_dichotomy(int array[], int size_t, int value ){
     int valueAddress = -1;
     int leftIntervalEdge = 0;
@@ -11,7 +19,7 @@ int find_by_dichotomy(int array[], int size_t, int value ){
         int m = (rightIntervalEdge + leftIntervalEdge) / 2; 
 
         if(array[m] == value){
-            return &(array[m]);
+            return m;
         }
         else if(array[m] < value){
             leftIntervalEdge = m+1; 
